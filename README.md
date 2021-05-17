@@ -1,25 +1,15 @@
-# StockNews_Analysis
-Analyzing the affect of news on stock prices
+# Stock_Price_Analysis
+Analyzing absolute and directional stock price movement
 
 
-Creating_A_FinBert - explores how to fine-tune a BERT model from Hugging Face Transformers - can be used in data_prep files (RNN_DataPrep.py, non_RNN_DataPrep.py)
+API_DataPulls : newsfilteriioPull.py - script to pull historical news data from newsfilter.io's API
+                polygonPull.py - script to pull historical stock price data from polygon.io's API
+                redditDataPull.py - script to pull historical reddit submissions data from pushshift.io (an API with historical reddit data)
+                
+DataPrep_AND_Models : RNN_DataPrep.py - data preparation and models (RNNs, Conv1D, WaveNet)
+                      non_RNN_DataPrep.py - data preparation and models (all others)
+                      data - all data used for RNN_DataPrep.py and non_RNN_DataPrep.py
 
-GloVe_WordEmbeddings - explores using GloVe's pre-trained word vectors 
-
-Multi_Input_Network - explores a neural network architecture that takes in both text and numerical data
-
-SimpleTextEmbedding - explores a network that utilizes a simple embedding layer for text data
-
-Two_Berts - explores using two BERT models concatenated together
-
-data - contains all data necessary for the two data prep files (RNN_DataPrep.py, non_RNN_DataPrep.py)
-
-FinBert_Sentiment_Analyzer.py - contains a pre-trained model from Hugging Face Transformers - can be used in data_prep files (RNN_DataPrep.py, non_RNN_DataPrep.py)
-
-RNN_DataPrep.py - contains all data preparation for models - LSTM, GRU, Conv1D, WaveNet
-
-newsfilteriioPull.py - contains script to pull stock news data 
-
-non_RNN_DataPrep.py - contains all data preparation for models - Log Regression, Kneighbors, SVM, SGD, Random Forest, AdaBoost, Gradient Boosting, Voting Classifier
-
-polygonPull.py - contains script to pull stock data
+Financial_Sentiment_Analyzers : Creating_A_FinBert - scripts that show how to fine-tune, save, and reload a BERT model for financial sentiment analysis (final model achieved over                                 96% accuracy on the Finacial PhraseBank dataset)
+                                HuggingFace_PreTrained_FinBERT - a pretrained and ready-to-go model for financial sentiment analysis from Hugging Face Transformers
+                                (either of these models can be used to provide sentiments to be used for both data prep and model files - RNN_DataPrep.py, non_RNN_DataPrep.py)
